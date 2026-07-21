@@ -71,19 +71,15 @@
                   </Label>
                   <TextField fx:id="usuario" alignment="CENTER" layoutX="66.0" layoutY="130.0" promptText="Usuario" style="-fx-background-radius: 10; -fx-border-color: black;" />
                   <PasswordField fx:id="senha" alignment="CENTER" layoutX="66.0" layoutY="200.0" promptText="Senha" style="-fx-background-radius: 10; -fx-border-color: black;" />
-                  <Button fx:id="botaoLogin" layoutX="55.0" layoutY="272.0" mnemonicParsing="false" onAction="#aoApertarBotao" onMouseClicked="#aoApertarBotao" prefHeight="30.0" prefWidth="182.0" style="-fx-background-color: black; -fx-background-radius: 10;" text="LOGAR" textFill="#f8f7f7" />
+                  <Button fx:id="botaoLogin" layoutX="117.0" layoutY="272.0" mnemonicParsing="false" onAction="#aoApertarBotao" onMouseClicked="#aoApertarBotao" style="-fx-background-color: black;" text="LOGAR" textFill="#f8f7f7" />
                   <Label fx:id="recuperarSenha" layoutX="57.0" layoutY="334.0" onMouseClicked="#aoEsquecerSenha" prefHeight="28.0" prefWidth="182.0" text="esqueci a senha? recuperar" textAlignment="CENTER" textFill="#865555">
                      <font>
                         <Font name="Century Gothic" size="13.0" />
                      </font>
                   </Label>
-                  <TextFlow fx:id="senhaErrada" layoutX="47.0" layoutY="235.0" prefHeight="30.0" prefWidth="192.0" textAlignment="CENTER" visible="false">
+                  <TextFlow fx:id="senhaErrada" layoutX="46.0" layoutY="235.0" prefHeight="30.0" prefWidth="193.0" textAlignment="CENTER" visible="false">
                      <children>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Erro senha ou usuario incorretos" wrappingWidth="192.53253173828125">
-                           <font>
-                              <Font name="Century Gothic" size="12.0" />
-                           </font>
-                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Erro senha ou usuario incorretos" wrappingWidth="192.53253173828125" />
                      </children></TextFlow>
                </children>
             </AnchorPane>
