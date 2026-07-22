@@ -1,0 +1,8 @@
+.butom_style{
+    -fx-background-color: #F2F2F2;
+    -fx-background-radius: 40;
+}
+
+.butom_style:hover{
+    -fx-background-color: black;
+}

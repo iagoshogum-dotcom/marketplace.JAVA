@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.escobar.marketplace.LoginController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.escobar.marketplace.LoginController">
    <children>
       <VBox alignment="CENTER" prefHeight="400.0" prefWidth="909.0" style="-fx-background-color: #F2F2F2; -fx-border-color: #8C8C8C; -fx-border-radius: 0; -fx-background-radius: 40;" HBox.hgrow="ALWAYS">
          <children>
@@ -43,12 +43,36 @@
                   <Reflection bottomOpacity="0.09" fraction="1.0" topOpacity="0.0" />
                </effect>
             </Label>
+            <Label prefHeight="28.0" prefWidth="162.0" text="sistema de estoque">
+               <font>
+                  <Font name="Century Gothic" size="17.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.08530805687203794">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.2368421107530594" green="0.06030701845884323" blue="0.06030701845884323" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <effect>
+                  <Reflection bottomOpacity="0.09" fraction="1.0" topOpacity="0.0" />
+               </effect>
+            </Label>
          </children></VBox>
       <VBox prefHeight="400.0" prefWidth="871.0" style="-fx-background-color: #3B1002;">
          <children>
-            <AnchorPane prefHeight="402.0" prefWidth="281.0">
+            <AnchorPane prefHeight="451.0" prefWidth="331.0">
                <children>
-                  <Label layoutX="105.0" layoutY="55.0" prefHeight="28.0" prefWidth="79.0" text="LOGIN">
+                  <Label layoutX="128.0" layoutY="55.0" prefHeight="28.0" prefWidth="79.0" text="LOGIN">
                      <font>
                         <Font name="Century Gothic" size="22.0" />
                      </font>
@@ -69,10 +93,10 @@
                         </LinearGradient>
                      </textFill>
                   </Label>
-                  <TextField fx:id="usuario" alignment="CENTER" layoutX="66.0" layoutY="130.0" promptText="Usuario" style="-fx-background-radius: 10; -fx-border-color: black;" />
-                  <PasswordField fx:id="senha" alignment="CENTER" layoutX="66.0" layoutY="200.0" promptText="Senha" style="-fx-background-radius: 10; -fx-border-color: black;" />
-                  <Button fx:id="botaoLogin" layoutX="117.0" layoutY="272.0" mnemonicParsing="false" onAction="#aoApertarBotao" onMouseClicked="#aoApertarBotao" style="-fx-background-color: black;" text="LOGAR" textFill="#f8f7f7" />
-                  <Label fx:id="recuperarSenha" layoutX="57.0" layoutY="334.0" onMouseClicked="#aoEsquecerSenha" prefHeight="28.0" prefWidth="182.0" text="esqueci a senha? recuperar" textAlignment="CENTER" textFill="#865555">
+                  <TextField fx:id="usuario" alignment="CENTER" layoutX="90.0" layoutY="132.0" promptText="Usuario" style="-fx-background-radius: 10; -fx-border-color: black;" />
+                  <PasswordField fx:id="senha" alignment="CENTER" layoutX="91.0" layoutY="201.0" promptText="Senha" style="-fx-background-radius: 10; -fx-border-color: black;" />
+                  <Button fx:id="botaoLogin" layoutX="110.0" layoutY="272.0" mnemonicParsing="false" onAction="#aoApertarBotao" onMouseClicked="#aoApertarBotao" prefHeight="25.0" prefWidth="115.0" style="-fx-background-color: black; -fx-background-radius: 10;" text="LOGAR" textFill="#f8f7f7" />
+                  <Label fx:id="recuperarSenha" layoutX="79.0" layoutY="360.0" onMouseClicked="#aoEsquecerSenha" prefHeight="28.0" prefWidth="182.0" text="esqueci a senha? recuperar" textAlignment="CENTER" textFill="#865555">
                      <font>
                         <Font name="Century Gothic" size="13.0" />
                      </font>
