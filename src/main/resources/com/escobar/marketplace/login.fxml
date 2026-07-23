@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
@@ -15,7 +16,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.escobar.marketplace.LoginController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.escobar.marketplace.LoginController">
    <children>
       <VBox alignment="CENTER" prefHeight="400.0" prefWidth="909.0" style="-fx-background-color: #F2F2F2; -fx-border-color: #8C8C8C; -fx-border-radius: 0; -fx-background-radius: 40;" HBox.hgrow="ALWAYS">
          <children>
@@ -93,17 +94,21 @@
                         </LinearGradient>
                      </textFill>
                   </Label>
-                  <TextField fx:id="usuario" alignment="CENTER" layoutX="90.0" layoutY="132.0" promptText="Usuario" style="-fx-background-radius: 10; -fx-border-color: black;" />
-                  <PasswordField fx:id="senha" alignment="CENTER" layoutX="91.0" layoutY="201.0" promptText="Senha" style="-fx-background-radius: 10; -fx-border-color: black;" />
-                  <Button fx:id="botaoLogin" layoutX="110.0" layoutY="272.0" mnemonicParsing="false" onAction="#aoApertarBotao" onMouseClicked="#aoApertarBotao" prefHeight="25.0" prefWidth="115.0" style="-fx-background-color: black; -fx-background-radius: 10;" text="LOGAR" textFill="#f8f7f7" />
-                  <Label fx:id="recuperarSenha" layoutX="79.0" layoutY="360.0" onMouseClicked="#aoEsquecerSenha" prefHeight="28.0" prefWidth="182.0" text="esqueci a senha? recuperar" textAlignment="CENTER" textFill="#865555">
+                  <TextField fx:id="usuario" alignment="CENTER" layoutX="90.0" layoutY="132.0" promptText="Usuario" styleClass="text_field_style" />
+                  <PasswordField fx:id="senha" alignment="CENTER" layoutX="91.0" layoutY="201.0" promptText="Senha" styleClass="text_field_style" />
+                  <Button fx:id="botaoLogin" layoutX="110.0" layoutY="272.0" mnemonicParsing="false" onAction="#aoApertarBotao" onMouseClicked="#aoApertarBotao" prefHeight="25.0" prefWidth="115.0" text="LOGAR" textFill="#f8f7f7">
+                     <styleClass>
+                        <String fx:value="butom_style1" />
+                        <String fx:value="butom_style_selection2" />
+                     </styleClass></Button>
+                  <Label fx:id="recuperarSenha" layoutX="79.0" layoutY="360.0" onMouseClicked="#aoEsquecerSenha" prefHeight="28.0" prefWidth="182.0" styleClass="butom_style2" text="esqueci a senha? recuperar" textAlignment="CENTER" textFill="#865555">
                      <font>
                         <Font name="Century Gothic" size="13.0" />
                      </font>
                   </Label>
                   <TextFlow fx:id="senhaErrada" layoutX="46.0" layoutY="235.0" prefHeight="30.0" prefWidth="193.0" textAlignment="CENTER" visible="false">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Erro senha ou usuario incorretos" wrappingWidth="192.53253173828125" />
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="butom_style2" text="Erro senha ou usuario incorretos" wrappingWidth="192.53253173828125" />
                      </children></TextFlow>
                </children>
             </AnchorPane>

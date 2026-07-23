@@ -10,6 +10,17 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class HomeController {
+
+    @FXML
+    protected void aoVisualizarEstoque(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("estoque.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Visualizar Estoque");
+        stage.show();
+    }
+
     @FXML
     protected void voltarTelaLogin(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("login.fxml"));
