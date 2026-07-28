@@ -16,7 +16,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane prefHeight="450.0" prefWidth="700.0" style="-fx-background-color: #3B1002;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.escobar.marketplace.controller.HomeController">
+<BorderPane prefHeight="450.0" prefWidth="700.0" style="-fx-background-color: #3B1002;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.escobar.marketplace.controller.RelatorioConttroler">
    <bottom>
       <HBox prefHeight="37.0" prefWidth="700.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER" />
    </bottom>
@@ -70,43 +70,167 @@
                   </Text>
                </graphic>
             </Button>
-            <Label text="AREA INICIAL">
+            <Label alignment="CENTER" contentDisplay="CENTER" text="RELATORIO" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets left="350.0" />
+               </HBox.margin>
                <font>
                   <Font name="Century Gothic" size="15.0" />
                </font>
                <textFill>
-                  <LinearGradient endX="1.0" endY="0.5355450236966824" startX="0.7819905213270142">
+                  <LinearGradient endX="0.7867298578199052" endY="1.0" startX="1.0">
                      <stops>
                         <Stop>
                            <color>
-                              <Color red="0.8157894611358643" green="0.16240254044532776" blue="0.16240254044532776" />
+                              <Color red="0.01315789483487606" green="0.009563839994370937" blue="0.009563839994370937" />
                            </color>
                         </Stop>
                         <Stop offset="1.0">
                            <color>
-                              <Color red="0.10526315867900848" green="0.09649122506380081" blue="0.09649122506380081" />
+                              <Color red="0.9868420958518982" green="0.03198099508881569" blue="0.03198099508881569" />
                            </color>
                         </Stop>
                      </stops>
                   </LinearGradient>
                </textFill>
-               <HBox.margin>
-                  <Insets left="350.0" />
-               </HBox.margin>
             </Label>
          </children>
       </HBox>
    </top>
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #F2F2F2; -fx-background-radius: 30;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black; -fx-background-radius: 30;" BorderPane.alignment="CENTER">
          <effect>
             <DropShadow height="47.38" radius="11.345" width="0.0" />
          </effect>
          <children>
-            <Label layoutX="90.0" layoutY="166.0" prefHeight="21.0" prefWidth="444.0" text="Bem vindo (a) ao controle de estoque da ECOBAR MOTORS">
+            <Label alignment="CENTER" layoutX="142.0" layoutY="17.0" prefHeight="32.0" prefWidth="310.0" style="-fx-background-color: black;" styleClass="butom_style_selection2" text="RELATORIO DE PRODUTOS NO ESTOQUE">
                <font>
-                  <Font name="Century Gothic" size="14.0" />
+                  <Font name="Century Gothic" size="15.0" />
                </font>
+               <effect>
+                  <DropShadow height="1.0" radius="7.0775" spread="0.05" width="29.31">
+                     <color>
+                        <Color red="0.9605262875556946" green="0.07115009427070618" blue="0.07115009427070618" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+            <Label alignment="CENTER" layoutX="207.0" layoutY="99.0" prefHeight="160.0" prefWidth="161.0" style="-fx-background-color: black;" text="0" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="25.0" />
+               </font>
+               <effect>
+                  <DropShadow height="15.16" radius="10.6175" spread="0.05" width="29.31">
+                     <color>
+                        <Color red="0.7882353067398071" green="0.6000000238418579" blue="0.0784313753247261" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <graphic>
+                  <Label alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" prefHeight="13.0" prefWidth="94.0" styleClass="butom_style4" text="Valor total do estoque" textAlignment="CENTER">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="0.5781990521327014" startX="0.985781990521327">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.75" green="0.7060185074806213" blue="0.4861111044883728" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+               </graphic>
+               <styleClass>
+                  <String fx:value="butom_style4" />
+                  <String fx:value="butom_style_selection4" />
+               </styleClass>
+            </Label>
+            <Label alignment="CENTER" layoutX="388.0" layoutY="99.0" prefHeight="160.0" prefWidth="161.0" style="-fx-background-color: black;" text="0" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="25.0" />
+               </font>
+               <effect>
+                  <DropShadow height="15.16" radius="10.6175" spread="0.05" width="29.31">
+                     <color>
+                        <Color red="0.7882353067398071" green="0.6000000238418579" blue="0.0784313753247261" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <graphic>
+                  <Label alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" prefHeight="13.0" prefWidth="94.0" text="Quantidade abaixo de 10" textAlignment="CENTER">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="0.5781990521327014" startX="0.985781990521327">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.75" green="0.7060185074806213" blue="0.4861111044883728" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+               </graphic>
+               <styleClass>
+                  <String fx:value="butom_style_selection2" />
+                  <String fx:value="butom_style4" />
+               </styleClass>
+            </Label>
+            <Label alignment="CENTER" layoutX="22.0" layoutY="99.0" prefHeight="160.0" prefWidth="161.0" style="-fx-background-color: black;" text="0" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="25.0" />
+               </font>
+               <effect>
+                  <DropShadow height="15.16" radius="10.6175" spread="0.05" width="29.31">
+                     <color>
+                        <Color red="0.7882353067398071" green="0.6000000238418579" blue="0.0784313753247261" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <graphic>
+                  <Label alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" prefHeight="13.0" prefWidth="94.0" text="Produtos cadastrados" textAlignment="CENTER">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="0.5781990521327014" startX="0.985781990521327">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.75" green="0.7060185074806213" blue="0.4861111044883728" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+               </graphic>
+               <styleClass>
+                  <String fx:value="butom_style4" />
+                  <String fx:value="butom_style_selection3" />
+               </styleClass>
             </Label>
          </children>
       </AnchorPane>
@@ -215,7 +339,7 @@
                   <String fx:value="butom_style1" />
                </styleClass>
             </Button>
-            <Button fx:id="btRelatorio" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#aoVerRelatorio" prefHeight="36.0" prefWidth="113.0" text="relatorio" textAlignment="CENTER">
+            <Button alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="36.0" prefWidth="113.0" text="relatorio" textAlignment="CENTER">
                <font>
                   <Font name="Century Gothic" size="8.0" />
                </font>
@@ -268,7 +392,7 @@
             </Button>
          </children>
          <effect>
-            <DropShadow height="255.0" radius="79.4925" width="64.97" />
+            <DropShadow height="33.96" radius="14.7075" width="26.87" />
          </effect>
       </VBox>
    </right>

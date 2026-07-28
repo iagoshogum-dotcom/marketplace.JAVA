@@ -6,6 +6,21 @@
     -fx-text-fill: white;
     -fx-background-color: black;
     -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, #ee2d2d, 15.00, 0.5, 3.0, 3.0);
+}
+
+.butom_style_selection3{
+    -fx-text-fill: white;
+    -fx-background-color: black;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, #0d9714, 15.00, 0.5, 3.0, 3.0);
+}
+
+.butom_style_selection4{
+    -fx-text-fill: white;
+    -fx-background-color: black;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, #c99914, 15.00, 0.5, 3.0, 3.0);
 }
 
 .butom_style1:hover{
@@ -27,9 +42,14 @@
     -fx-scale-y: 1.1;
     -fx-effect: dropshadow(gaussian, red, 4, 0.5, 0, 0);
     -fx-cursor: 👌
-
+}
+.butom_style4:hover{
+    -fx-scale-x: 1.6;
+    -fx-scale-y: 1.6;
+    -fx-cursor: 👌
 }
 .text_field_style{
-    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-background-radius:10;
     -fx-border-color: black;
 }

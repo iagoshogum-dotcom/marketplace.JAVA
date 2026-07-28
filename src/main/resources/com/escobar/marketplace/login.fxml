@@ -16,7 +16,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.escobar.marketplace.LoginController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.escobar.marketplace.controller.LoginController">
    <children>
       <VBox alignment="CENTER" prefHeight="400.0" prefWidth="909.0" style="-fx-background-color: #F2F2F2; -fx-border-color: #8C8C8C; -fx-border-radius: 0; -fx-background-radius: 40;" HBox.hgrow="ALWAYS">
          <children>
@@ -96,7 +96,7 @@
                   </Label>
                   <TextField fx:id="usuario" alignment="CENTER" layoutX="90.0" layoutY="132.0" promptText="Usuario" styleClass="text_field_style" />
                   <PasswordField fx:id="senha" alignment="CENTER" layoutX="91.0" layoutY="201.0" promptText="Senha" styleClass="text_field_style" />
-                  <Button fx:id="botaoLogin" layoutX="110.0" layoutY="272.0" mnemonicParsing="false" onAction="#aoApertarBotao" onMouseClicked="#aoApertarBotao" prefHeight="25.0" prefWidth="115.0" text="LOGAR" textFill="#f8f7f7">
+                  <Button fx:id="botaoLogin" layoutX="110.0" layoutY="272.0" mnemonicParsing="false" onAction="#aoApertarBotao" prefHeight="25.0" prefWidth="115.0" text="LOGAR" textFill="#f8f7f7">
                      <styleClass>
                         <String fx:value="butom_style1" />
                         <String fx:value="butom_style_selection2" />

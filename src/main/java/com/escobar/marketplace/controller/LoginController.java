@@ -1,4 +1,4 @@
-package com.escobar.marketplace;
+package com.escobar.marketplace.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -27,7 +27,7 @@ public class LoginController {
     protected void aoApertarBotao() throws IOException {
         senhaErrada.setVisible(false);
         if ( usuarioCadastrado.equalsIgnoreCase(usuario.getText()) && senhaCadastrada.equals(senha.getText())){
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("home.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/escobar/marketplace/home.fxml"));
             Scene scene = new Scene(loader.load());
             Stage stage = new Stage();
             stage.setScene(scene);

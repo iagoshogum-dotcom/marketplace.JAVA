@@ -19,7 +19,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane prefHeight="450.0" prefWidth="700.0" style="-fx-background-color: #3B1002;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.escobar.marketplace.EstoqueController">
+<BorderPane prefHeight="450.0" prefWidth="700.0" style="-fx-background-color: #3B1002;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.escobar.marketplace.controller.EstoqueController">
    <bottom>
       <HBox prefHeight="37.0" prefWidth="700.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER" />
    </bottom>
@@ -115,7 +115,7 @@
                   <TableColumn prefWidth="145.0" text="PRECO (R$)" />
               </columns>
             </TableView>
-            <HBox layoutX="19.0" layoutY="14.0" prefHeight="28.0" prefWidth="555.0">
+            <HBox alignment="CENTER" layoutX="19.0" layoutY="3.0" prefHeight="45.0" prefWidth="555.0" style="-fx-background-color: black; -fx-background-radius: 20;" AnchorPane.bottomAnchor="326.0" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="3.0">
                <children>
                   <TextField prefHeight="25.0" prefWidth="247.0" styleClass="text_field_style">
                      <padding>
@@ -146,6 +146,13 @@
                            </stops>
                         </LinearGradient>
                      </textFill>
+                     <effect>
+                        <DropShadow height="25.4" offsetX="5.0" radius="9.635" spread="0.01" width="15.14">
+                           <color>
+                              <Color red="0.8100000023841858" green="0.29322001338005066" blue="0.18629999458789825" />
+                           </color>
+                        </DropShadow>
+                     </effect>
                   </Button>
                   <Button layoutX="159.0" layoutY="10.0" mnemonicParsing="false" text="Editar">
                      <HBox.margin>
@@ -171,6 +178,13 @@
                            </stops>
                         </LinearGradient>
                      </textFill>
+                     <effect>
+                        <DropShadow height="18.07" radius="7.8025" width="15.14">
+                           <color>
+                              <Color red="0.8815789222717285" green="0.31018519401550293" blue="0.31018519401550293" />
+                           </color>
+                        </DropShadow>
+                     </effect>
                   </Button>
                   <Button layoutX="211.0" layoutY="10.0" mnemonicParsing="false" text="Remover">
                      <HBox.margin>
@@ -230,7 +244,7 @@
    <right>
       <VBox alignment="CENTER" prefHeight="374.0" prefWidth="105.0" style="-fx-background-color: #3B1002; -fx-background-radius: 40;" BorderPane.alignment="CENTER">
          <children>
-            <Button alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="36.0" prefWidth="113.0" text="entrada de produtos" textAlignment="CENTER">
+            <Button fx:id="btEntradaDeProdutos" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#aoRegistrarProdutos" prefHeight="36.0" prefWidth="113.0" text="entrada de produtos" textAlignment="CENTER">
                <font>
                   <Font name="Century Gothic" size="8.0" />
                </font>
@@ -331,7 +345,7 @@
                   <String fx:value="butom_style1" />
                </styleClass>
             </Button>
-            <Button alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="36.0" prefWidth="113.0" text="relatorio" textAlignment="CENTER">
+            <Button fx:id="btRelatorio" alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#aoVerRelatorio" prefHeight="36.0" prefWidth="113.0" text="relatorio" textAlignment="CENTER">
                <font>
                   <Font name="Century Gothic" size="8.0" />
                </font>
