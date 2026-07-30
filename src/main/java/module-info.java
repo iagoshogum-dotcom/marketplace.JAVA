@@ -4,7 +4,7 @@ module com.escobar.marketplace {
 
 
     opens com.escobar.marketplace to javafx.fxml;
-    exports com.escobar.marketplace;
-    exports com.escobar.marketplace.controller;
     opens com.escobar.marketplace.controller to javafx.fxml;
+    opens com.escobar.marketplace.model to javafx.base;
+    exports com.escobar.marketplace;
 }

@@ -52,6 +52,10 @@ public class EstoqueController {
 
         listaFiltrada = new FilteredList<>(dadosEstoque.listarProdutos(),p -> true);
         tabelaProdutos.setItems(listaFiltrada);
+        campoBusca.textProperty().addListener( (obs, textoAntigo, textoNovo)->{
+            String filtro = textoNovo == null ? "": textoNovo.toLowerCase();
+            listaFiltrada.setPredicate(produto -> filtro.isEmpty() || produto.getNome().toLowerCase().contains(filtro) || produto.getCategoria().toLowerCase().contains(filtro) || produto.getPreco() <= Double.parseDouble(filtro));
+        });
     }
 
     @FXML

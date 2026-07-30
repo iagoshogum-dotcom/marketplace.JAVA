@@ -8,6 +8,7 @@
 <?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
@@ -18,62 +19,66 @@
 
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.escobar.marketplace.controller.LoginController">
    <children>
-      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="909.0" style="-fx-background-color: #F2F2F2; -fx-border-color: #8C8C8C; -fx-border-radius: 0; -fx-background-radius: 40;" HBox.hgrow="ALWAYS">
+      <VBox alignment="CENTER" prefHeight="450.0" prefWidth="890.0" style="-fx-background-color: #F2F2F2; -fx-border-color: #8C8C8C; -fx-border-radius: 0; -fx-background-radius: 40;" styleClass="Background_image" HBox.hgrow="ALWAYS">
          <children>
-            <Label prefHeight="1.0" prefWidth="202.0" text="ESCOBAR MOTORS" underline="true">
-               <font>
-                  <Font name="Century Gothic" size="22.0" />
-               </font>
-               <textFill>
-                  <LinearGradient endX="1.0" endY="1.0" startX="0.08530805687203794">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="0.2368421107530594" green="0.06030701845884323" blue="0.06030701845884323" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color red="0.8684210777282715" green="0.028143275529146194" blue="0.028143275529146194" />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </textFill>
-               <effect>
-                  <Reflection bottomOpacity="0.09" fraction="1.0" topOpacity="0.0" />
-               </effect>
-            </Label>
-            <Label prefHeight="28.0" prefWidth="162.0" text="sistema de estoque">
-               <font>
-                  <Font name="Century Gothic" size="17.0" />
-               </font>
-               <textFill>
-                  <LinearGradient endX="1.0" endY="1.0" startX="0.08530805687203794">
-                     <stops>
-                        <Stop>
-                           <color>
-                              <Color red="0.2368421107530594" green="0.06030701845884323" blue="0.06030701845884323" />
-                           </color>
-                        </Stop>
-                        <Stop offset="1.0">
-                           <color>
-                              <Color />
-                           </color>
-                        </Stop>
-                     </stops>
-                  </LinearGradient>
-               </textFill>
-               <effect>
-                  <Reflection bottomOpacity="0.09" fraction="1.0" topOpacity="0.0" />
-               </effect>
-            </Label>
+            <Pane opacity="0.75" prefHeight="456.0" prefWidth="366.0" style="-fx-background-color: black;">
+               <children>
+                  <Label layoutX="67.0" layoutY="173.0" prefHeight="31.0" prefWidth="193.0" text=" ESCOBAR MOTORS" underline="true">
+                     <font>
+                        <Font name="Century Gothic Bold" size="21.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.08530805687203794">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8684210777282715" green="0.04020467773079872" blue="0.04020467773079872" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.8684210777282715" green="0.028143275529146194" blue="0.028143275529146194" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <effect>
+                        <Reflection bottomOpacity="0.09" fraction="1.0" topOpacity="0.0" />
+                     </effect>
+                  </Label>
+                  <Label contentDisplay="CENTER" layoutX="93.0" layoutY="204.0" prefHeight="28.0" prefWidth="143.0" text="sistema de estoque">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.08530805687203794">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.9210526347160339" green="0.8954678177833557" blue="0.8954678177833557" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.9473684430122375" green="0.9473684430122375" blue="0.9473684430122375" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <effect>
+                        <Reflection bottomOpacity="0.09" fraction="1.0" topOpacity="0.0" />
+                     </effect>
+                  </Label>
+               </children>
+            </Pane>
          </children></VBox>
       <VBox prefHeight="400.0" prefWidth="871.0" style="-fx-background-color: #3B1002;">
          <children>
             <AnchorPane prefHeight="451.0" prefWidth="331.0">
                <children>
-                  <Label layoutX="128.0" layoutY="55.0" prefHeight="28.0" prefWidth="79.0" text="LOGIN">
+                  <Label layoutX="130.0" layoutY="55.0" prefHeight="28.0" prefWidth="79.0" text="LOGIN">
                      <font>
                         <Font name="Century Gothic" size="22.0" />
                      </font>
@@ -96,7 +101,7 @@
                   </Label>
                   <TextField fx:id="usuario" alignment="CENTER" layoutX="90.0" layoutY="132.0" promptText="Usuario" styleClass="text_field_style" />
                   <PasswordField fx:id="senha" alignment="CENTER" layoutX="91.0" layoutY="201.0" promptText="Senha" styleClass="text_field_style" />
-                  <Button fx:id="botaoLogin" layoutX="110.0" layoutY="272.0" mnemonicParsing="false" onAction="#aoApertarBotao" prefHeight="25.0" prefWidth="115.0" text="LOGAR" textFill="#f8f7f7">
+                  <Button fx:id="botaoLogin" layoutX="111.0" layoutY="272.0" mnemonicParsing="false" onAction="#aoApertarBotao" prefHeight="25.0" prefWidth="115.0" text="LOGAR" textFill="#f8f7f7">
                      <styleClass>
                         <String fx:value="butom_style1" />
                         <String fx:value="butom_style_selection2" />

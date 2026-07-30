@@ -38,17 +38,17 @@ public class EntradaProdutosController {
 
     public void preencherParaEdicao( Produto produto ){
         this.produtoEmEdicao = produto;
-        nome.setText(produto.getNome());
-        categoria.setText(produto.getCategoria());
-        quantidade.setText(String.valueOf(produto.getQuantidade()));
-        preco.setText(String.valueOf(produto.getPreco()));
+        editNome.setText(produto.getNome());
+        editCategoria.setText(produto.getCategoria());
+        editQuantidade.setText(String.valueOf(produto.getQuantidade()));
+        editPreco.setText(String.valueOf(produto.getPreco()));
         salvar.setText("Salvar Alterações");
     }
     @FXML
     protected void aoSalvar(ActionEvent event) throws IOException{
         String nome = editNome.getText();
         String categoria = editCategoria.getText();
-        if( nome == null || nome.isBlank() || categoria == null || categoria.isBlank()){
+        if( editNome == null || nome.isBlank() || categoria == null || categoria.isBlank()){
             mostrarErro("Informe um nome e uma categoria válida!");
             return;
         }

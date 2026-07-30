@@ -53,3 +53,10 @@
     -fx-background-radius:10;
     -fx-border-color: black;
 }
+.Background_image{
+    -fx-background-image: url("./img/carro.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center;
+
+}

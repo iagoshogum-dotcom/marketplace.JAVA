@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -15,7 +16,8 @@ public class LoginApplication extends Application {
         Parent root = fxmlLoader.load();
 
         Scene scene = new Scene(root, 600, 400);
-        stage.setTitle("Marketplace");
+        stage.setTitle("ESCOBAR MOTORS");
+        stage.getIcons().add( new Image(LoginApplication.class.getResourceAsStream("img/carro.jpg")));
         stage.setScene(scene);
         stage.show();
     }
