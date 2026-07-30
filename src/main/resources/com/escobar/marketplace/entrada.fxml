@@ -125,12 +125,12 @@
                   </LinearGradient>
                </textFill>
             </Label>
-            <TextField alignment="CENTER" layoutX="93.0" layoutY="87.0" prefHeight="27.0" prefWidth="404.0" promptText="Nome" styleClass="text_field_style" />
-            <TextField alignment="CENTER" layoutX="93.0" layoutY="218.0" prefHeight="27.0" prefWidth="149.0" promptText="Quantidade" styleClass="text_field_style" />
-            <TextField alignment="CENTER" layoutX="93.0" layoutY="153.0" prefHeight="27.0" prefWidth="404.0" promptText="Categoria" styleClass="text_field_style" />
-            <TextField alignment="CENTER" layoutX="305.0" layoutY="218.0" prefHeight="27.0" prefWidth="149.0" promptText="Preco" styleClass="text_field_style" />
+            <TextField fx:id="editNome" alignment="CENTER" layoutX="93.0" layoutY="87.0" prefHeight="27.0" prefWidth="404.0" promptText="Nome" styleClass="text_field_style" />
+            <TextField fx:id="editQuantidade" alignment="CENTER" layoutX="93.0" layoutY="218.0" prefHeight="27.0" prefWidth="149.0" promptText="Quantidade" styleClass="text_field_style" />
+            <TextField fx:id="editCategoria" alignment="CENTER" layoutX="93.0" layoutY="153.0" prefHeight="27.0" prefWidth="404.0" promptText="Categoria" styleClass="text_field_style" />
+            <TextField fx:id="editPreco" alignment="CENTER" layoutX="305.0" layoutY="218.0" prefHeight="27.0" prefWidth="149.0" promptText="Preco" styleClass="text_field_style" />
             <HBox alignment="CENTER" layoutX="-2.0" layoutY="304.0" prefHeight="76.0" prefWidth="600.0" style="-fx-background-color: black; -fx-background-radius: 20;" />
-            <Button fx:id="salvar" layoutX="319.0" layoutY="327.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="59.0" text="Salvar">
+            <Button fx:id="salvar" layoutX="319.0" layoutY="327.0" mnemonicParsing="false" onAction="#aoSalvar" prefHeight="25.0" prefWidth="59.0" text="Salvar">
                <styleClass>
                   <String fx:value="butom_style1" />
                   <String fx:value="butom_style_selection2" />
