@@ -1,5 +1,6 @@
 package com.escobar.marketplace;
 
+import com.escobar.marketplace.controller.MusicController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,6 +13,7 @@ import java.io.IOException;
 public class LoginApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
+        MusicController.iniciarMusica();
         FXMLLoader fxmlLoader = new FXMLLoader(LoginApplication.class.getResource("login.fxml"));
         Parent root = fxmlLoader.load();
 

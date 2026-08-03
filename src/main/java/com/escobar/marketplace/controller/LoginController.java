@@ -7,10 +7,36 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.MediaView;
+
 
 import java.io.IOException;
 
 public class LoginController {
+    @FXML
+    private MediaView mediaView;
+
+    private MediaPlayer mediaPlayer;
+
+    @FXML
+    public void initialize() {
+
+        String caminho = getClass()
+                .getResource("/com/escobar/marketplace/videos/carros.mp4")
+                .toExternalForm();
+
+        Media media = new Media(caminho);
+
+        mediaPlayer = new MediaPlayer(media);
+
+        mediaView.setMediaPlayer(mediaPlayer);
+
+        mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
+
+        mediaPlayer.play();
+    }
     @FXML
     private TextField usuario;
 
