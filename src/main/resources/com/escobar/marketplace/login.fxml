@@ -24,7 +24,7 @@
             <AnchorPane opacity="0.88" prefHeight="487.0" prefWidth="357.0" style="-fx-background-color: black;">
                <children>
                   <MediaView fx:id="mediaView" fitHeight="445.0" fitWidth="360.0" nodeOrientation="INHERIT" preserveRatio="false" />
-                  <Pane opacity="0.86" prefHeight="448.0" prefWidth="360.0" style="-fx-background-color: black;">
+                  <Pane opacity="0.78" prefHeight="448.0" prefWidth="360.0" style="-fx-background-color: black;">
                      <children>
                         <Label layoutX="98.0" layoutY="135.0" prefHeight="90.0" prefWidth="182.0" text="ESCOBAR MOTORS" underline="true">
                            <textFill>

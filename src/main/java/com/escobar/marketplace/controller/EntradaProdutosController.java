@@ -18,7 +18,7 @@ public class EntradaProdutosController {
     private Button salvar;
 
     @FXML
-    private Button cancelar;
+    private Button btCancelar;
 
     @FXML
     private TextField editNome;
@@ -43,6 +43,7 @@ public class EntradaProdutosController {
         editQuantidade.setText(String.valueOf(produto.getQuantidade()));
         editPreco.setText(String.valueOf(produto.getPreco()));
         salvar.setText("Salvar Alterações");
+        btCancelar.setText("Cancelar Alterações");
     }
     @FXML
     protected void aoSalvar(ActionEvent event) throws IOException{

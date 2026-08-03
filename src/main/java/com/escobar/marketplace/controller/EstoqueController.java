@@ -2,15 +2,14 @@ package com.escobar.marketplace.controller;
 
 import com.escobar.marketplace.model.EstoqueDAO;
 import com.escobar.marketplace.model.Produto;
+import com.escobar.marketplace.util.GerenciadorTela;
 import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
@@ -59,15 +58,47 @@ public class EstoqueController {
     }
 
     @FXML
-    protected void aoAdicionarProdutos(){
+    protected void aoAdicionarProdutos(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/escobar/marketplace/entrada.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Adicionar Produtos");
+        stage.show();
 
     }
     @FXML
-    protected void aoEditarProdutos(){
+    protected void aoEditarProdutos(ActionEvent event) throws IOException
+    {
+        Produto produtoSelecionado = (Produto)tabelaProdutos.getSelectionModel().getSelectedItem();
+        if (produtoSelecionado == null){
+            mostrarAlerta("Selecione um produto para editar");
+            return;
+        }
+        GerenciadorTela.getInstance().telaDeEdicao(event,"entrada.fxml","Sistema de estoque - EDIÇÃO",(EntradaProdutosController controller) -> controller.preencherParaEdicao(produtoSelecionado));
 
     }
+
+    public void mostrarAlerta(String mensagem){
+        Alert alerta = new Alert(Alert.AlertType.INFORMATION,mensagem);
+        alerta.setHeaderText(null);
+        alerta.showAndWait();
+    }
+
+
     @FXML
     protected void aoRemoverProdutos(){
+        Produto produtoSelecionado = (Produto) tabelaProdutos.getSelectionModel().getSelectedItem();
+        if ( produtoSelecionado == null){
+            mostrarAlerta("Selecionar um produto para remover");
+            return;
+        }
+        Alert confirmacao = new Alert(Alert.AlertType.CONFIRMATION,"Remover o produto" + produtoSelecionado.getNome() + "do estoque?");
+        confirmacao.setHeaderText(null);
+        ButtonType btnSim = new ButtonType("Sim");
+        ButtonType btnNao = new ButtonType("Não");
+        confirmacao.getButtonTypes().setAll(btnSim,btnNao);
+        confirmacao.showAndWait().ifPresent(botao -> {dadosEstoque.remover(produtoSelecionado);});
 
     }
     @FXML

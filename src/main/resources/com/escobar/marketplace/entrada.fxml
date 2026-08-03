@@ -129,33 +129,39 @@
             <TextField fx:id="editQuantidade" alignment="CENTER" layoutX="93.0" layoutY="218.0" prefHeight="27.0" prefWidth="149.0" promptText="Quantidade" styleClass="text_field_style" />
             <TextField fx:id="editCategoria" alignment="CENTER" layoutX="93.0" layoutY="153.0" prefHeight="27.0" prefWidth="404.0" promptText="Categoria" styleClass="text_field_style" />
             <TextField fx:id="editPreco" alignment="CENTER" layoutX="305.0" layoutY="218.0" prefHeight="27.0" prefWidth="149.0" promptText="Preco" styleClass="text_field_style" />
-            <HBox alignment="CENTER" layoutX="-2.0" layoutY="304.0" prefHeight="76.0" prefWidth="600.0" style="-fx-background-color: black; -fx-background-radius: 20;" />
-            <Button fx:id="salvar" layoutX="319.0" layoutY="327.0" mnemonicParsing="false" onAction="#aoSalvar" prefHeight="25.0" prefWidth="59.0" text="Salvar">
-               <styleClass>
-                  <String fx:value="butom_style1" />
-                  <String fx:value="butom_style_selection2" />
-               </styleClass>
-               <effect>
-                  <DropShadow height="23.93" offsetX="5.0" offsetY="5.0" radius="11.467500000000001" width="23.94">
-                     <color>
-                        <Color red="0.9333333373069763" green="0.1764705926179886" blue="0.1764705926179886" />
-                     </color>
-                  </DropShadow>
-               </effect>
-            </Button>
-            <Button fx:id="btCancelar" layoutX="202.0" layoutY="327.0" mnemonicParsing="false" onAction="#aoCancelar" text="Cancelar">
-               <styleClass>
-                  <String fx:value="butom_style1" />
-                  <String fx:value="butom_style_selection2" />
-               </styleClass>
-               <effect>
-                  <DropShadow height="22.84" offsetX="5.0" offsetY="5.0" radius="11.195" width="23.94">
-                     <color>
-                        <Color red="0.9333333373069763" green="0.1764705926179886" blue="0.1764705926179886" />
-                     </color>
-                  </DropShadow>
-               </effect>
-            </Button>
+            <HBox alignment="CENTER" layoutX="86.0" layoutY="301.0" prefHeight="59.0" prefWidth="406.0">
+               <children>
+                  <Button fx:id="btCancelar" minHeight="25.0" minWidth="109.0" mnemonicParsing="false" onAction="#aoCancelar" text="Cancelar" HBox.hgrow="ALWAYS">
+                     <styleClass>
+                        <String fx:value="butom_style1" />
+                        <String fx:value="butom_style_selection2" />
+                     </styleClass>
+                     <effect>
+                        <DropShadow height="22.84" offsetX="5.0" offsetY="5.0" radius="11.195" width="23.94">
+                           <color>
+                              <Color red="0.9333333373069763" green="0.1764705926179886" blue="0.1764705926179886" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="salvar" minHeight="25.0" minWidth="109.0" mnemonicParsing="false" onAction="#aoSalvar" text="Salvar" HBox.hgrow="ALWAYS">
+                     <styleClass>
+                        <String fx:value="butom_style1" />
+                        <String fx:value="butom_style_selection2" />
+                     </styleClass>
+                     <effect>
+                        <DropShadow height="23.93" offsetX="5.0" offsetY="5.0" radius="11.467500000000001" width="23.94">
+                           <color>
+                              <Color red="0.9333333373069763" green="0.1764705926179886" blue="0.1764705926179886" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Button>
+               </children>
+            </HBox>
          </children>
       </AnchorPane>
    </center>
