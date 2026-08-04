@@ -5,6 +5,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
@@ -26,7 +28,7 @@
                   <MediaView fx:id="mediaView" fitHeight="445.0" fitWidth="360.0" nodeOrientation="INHERIT" preserveRatio="false" />
                   <Pane opacity="0.78" prefHeight="448.0" prefWidth="360.0" style="-fx-background-color: black;">
                      <children>
-                        <Label layoutX="98.0" layoutY="135.0" prefHeight="90.0" prefWidth="182.0" text="ESCOBAR MOTORS" underline="true">
+                        <Label layoutX="98.0" layoutY="135.0" prefHeight="90.0" prefWidth="165.0" text="ESCOBAR MOTORS" underline="true">
                            <textFill>
                               <LinearGradient endX="1.0" endY="1.0" startX="1.0">
                                  <stops>
@@ -46,6 +48,20 @@
                            <font>
                               <Font name="Century Gothic" size="18.0" />
                            </font>
+                           <effect>
+                              <DropShadow>
+                                 <color>
+                                    <Color red="1.0" />
+                                 </color>
+                                 <input>
+                                    <Shadow height="0.0" radius="0.0" width="0.0">
+                                       <color>
+                                          <Color red="1.0" />
+                                       </color>
+                                    </Shadow>
+                                 </input>
+                              </DropShadow>
+                           </effect>
                         </Label>
                         <Label layoutX="121.0" layoutY="204.0" text="sistema de estoque">
                            <textFill>

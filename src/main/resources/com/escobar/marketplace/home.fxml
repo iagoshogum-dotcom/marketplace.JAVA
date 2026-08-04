@@ -6,10 +6,13 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
@@ -103,10 +106,52 @@
             <DropShadow height="47.38" radius="11.345" width="0.0" />
          </effect>
          <children>
+            <HBox alignment="CENTER" prefHeight="373.0" prefWidth="596.0">
+               <children>
+                  <MediaView fx:id="mediaView2" fitHeight="360.0" fitWidth="120.0" nodeOrientation="INHERIT" preserveRatio="false" />
+                  <MediaView fx:id="mediaView3" fitHeight="360.0" fitWidth="120.0" layoutX="248.0" layoutY="17.0" nodeOrientation="INHERIT" preserveRatio="false">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </MediaView>
+                  <MediaView fx:id="mediaView4" fitHeight="360.0" fitWidth="120.0" nodeOrientation="INHERIT" preserveRatio="false">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </MediaView>
+               </children>
+            </HBox>
+            <Pane layoutX="75.0" opacity="0.8" prefHeight="374.0" prefWidth="446.0" style="-fx-background-color: black;" />
             <Label layoutX="90.0" layoutY="166.0" prefHeight="21.0" prefWidth="444.0" text="Bem vindo (a) ao controle de estoque da ECOBAR MOTORS">
                <font>
                   <Font name="Century Gothic" size="14.0" />
                </font>
+               <textFill>
+                  <LinearGradient endX="0.014218009478672985" endY="0.9620853080568721">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.9736841917037964" green="0.9736841917037964" blue="0.9736841917037964" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9736841917037964" green="0.9736841917037964" blue="0.9736841917037964" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <effect>
+                  <Shadow height="0.0" radius="0.0" width="0.0">
+                     <input>
+                        <DropShadow />
+                     </input>
+                     <color>
+                        <Color red="0.9473684430122375" green="0.12719298899173737" blue="0.12719298899173737" />
+                     </color>
+                  </Shadow>
+               </effect>
             </Label>
          </children>
       </AnchorPane>

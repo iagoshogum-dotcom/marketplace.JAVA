@@ -61,7 +61,6 @@ public class Produto {
         return quantidade * preco;
    }
 
-
    @Override
     public String toString() {
         return "ID: "+ this.id +

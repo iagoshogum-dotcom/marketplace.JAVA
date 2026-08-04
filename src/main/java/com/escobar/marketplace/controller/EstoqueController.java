@@ -43,6 +43,7 @@ public class EstoqueController {
 
     @FXML
     public void initialize(){
+
         colunaId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colunaNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
         colunaCategoria.setCellValueFactory(new PropertyValueFactory<>("categoria"));
