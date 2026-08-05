@@ -1,7 +1,12 @@
 package com.escobar.marketplace.controller;
 
+import com.escobar.marketplace.model.Usuario;
+import com.escobar.marketplace.model.UsuarioDAO;
+import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -13,6 +18,7 @@ import javafx.scene.media.MediaView;
 
 
 import java.io.IOException;
+import java.util.Optional;
 
 public class LoginController {
     @FXML
@@ -41,18 +47,21 @@ public class LoginController {
     private TextField usuario;
 
     @FXML
-    private PasswordField senha;
+    private TextFlow senhaErrada;
 
     @FXML
-    private TextFlow senhaErrada;
-    private final String usuarioCadastrado = "iago";
-    private final String senhaCadastrada = "123";
+    private PasswordField senha;
 
+    private final UsuarioDAO bdUsuario = UsuarioDAO.getInstance();
 
     @FXML
     protected void aoApertarBotao() throws IOException {
         senhaErrada.setVisible(false);
-        if ( usuarioCadastrado.equalsIgnoreCase(usuario.getText()) && senhaCadastrada.equals(senha.getText())){
+        String udsuarioDigitado = usuario.getText().toLowerCase();
+        String senhaDigitada = senha.getText();
+        Optional<Usuario> usuarioEncontrado = bdUsuario.buscarPorEmail(udsuarioDigitado);
+
+        if ( usuarioEncontrado.isPresent() && usuarioEncontrado.get().getSenha().equals(senhaDigitada)) {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/escobar/marketplace/home.fxml"));
             Scene scene = new Scene(loader.load());
             Stage stage = new Stage();
@@ -65,7 +74,12 @@ public class LoginController {
 
     }
     @FXML
-    protected void aoEsquecerSenha(){
-        System.out.println("Voce esqueceu sua senha!");
+    protected void aoSemCadastro(Event event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/escobar/marketplace/cadastro.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Visualizar Estoque");
+        stage.show();
     }
 }

@@ -11,8 +11,8 @@ import java.io.IOException;
 import java.util.function.Consumer;
 
 public class GerenciadorTela {
-    private static GerenciadorTela instancia;
-    private GerenciadorTela(){
+    public static GerenciadorTela instancia;
+    public GerenciadorTela(){
 
     }
 

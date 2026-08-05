@@ -19,7 +19,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.escobar.marketplace.controller.LoginController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.escobar.marketplace.controller.CadastroController">
    <children>
       <VBox alignment="CENTER" prefHeight="450.0" prefWidth="890.0" HBox.hgrow="ALWAYS">
          <children>
@@ -91,9 +91,9 @@
          </children></VBox>
       <VBox prefHeight="400.0" prefWidth="871.0" style="-fx-background-color: #3B1002;">
          <children>
-            <AnchorPane prefHeight="450.0" prefWidth="283.0">
+            <AnchorPane prefHeight="450.0" prefWidth="384.0">
                <children>
-                  <Label layoutX="140.0" layoutY="55.0" prefHeight="28.0" prefWidth="79.0" text="LOGIN">
+                  <Label layoutX="107.0" layoutY="55.0" prefHeight="28.0" prefWidth="127.0" text="CADASTRO">
                      <font>
                         <Font name="Century Gothic" size="22.0" />
                      </font>
@@ -114,22 +114,33 @@
                         </LinearGradient>
                      </textFill>
                   </Label>
-                  <TextField fx:id="usuario" alignment="CENTER" layoutX="100.0" layoutY="132.0" promptText="Usuario" styleClass="text_field_style" />
-                  <PasswordField fx:id="senha" alignment="CENTER" layoutX="100.0" layoutY="201.0" promptText="Senha" styleClass="text_field_style" />
-                  <Button fx:id="botaoLogin" layoutX="117.0" layoutY="272.0" mnemonicParsing="false" onAction="#aoApertarBotao" prefHeight="25.0" prefWidth="115.0" text="LOGAR" textFill="#f8f7f7">
+                  <TextField fx:id="usuarioCadastrar" alignment="CENTER" layoutX="91.0" layoutY="106.0" promptText="Usuario" styleClass="text_field_style" />
+                  <PasswordField fx:id="senhaCadastrar" alignment="CENTER" layoutX="92.0" layoutY="166.0" promptText="Senha" styleClass="text_field_style" />
+                  <Button fx:id="btnCadastrar" layoutX="112.0" layoutY="306.0" mnemonicParsing="false" onAction="#aoCadastrar" prefHeight="25.0" prefWidth="115.0" text="CADASTRAR" textFill="#f8f7f7">
                      <styleClass>
                         <String fx:value="butom_style1" />
                         <String fx:value="butom_style_selection2" />
                      </styleClass></Button>
-                  <Label fx:id="txtCadastrar" layoutX="71.0" layoutY="360.0" onMouseClicked="#aoSemCadastro" prefHeight="28.0" prefWidth="212.0" styleClass="butom_style2" text="Nao possui cadastro? cadastrar!" textAlignment="CENTER" textFill="#865555">
+                  <Label fx:id="recuperarSenha" layoutX="94.0" layoutY="360.0" onMouseClicked="#aoJaTerConta" prefHeight="28.0" prefWidth="151.0" styleClass="butom_style2" text="Ja possui conta? entre!" textAlignment="CENTER" textFill="#865555">
                      <font>
                         <Font name="Century Gothic" size="13.0" />
                      </font>
                   </Label>
-                  <TextFlow fx:id="senhaErrada" layoutX="46.0" layoutY="235.0" prefHeight="30.0" prefWidth="193.0" textAlignment="CENTER" visible="false">
+                  <TextFlow fx:id="senhaNaoIguais" layoutX="46.0" layoutY="256.0" prefHeight="25.0" prefWidth="246.0" textAlignment="CENTER" visible="false">
                      <children>
-                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="butom_style2" text="Erro senha ou usuario incorretos" wrappingWidth="192.53253173828125" />
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="butom_style2" text="As senhas nao coencidem" wrappingWidth="162.53515625" />
                      </children></TextFlow>
+                  <PasswordField fx:id="confirmarSenha" alignment="CENTER" layoutX="92.0" layoutY="224.0" promptText="Confirme a senha" styleClass="text_field_style" />
+                  <TextFlow fx:id="semNada" layoutX="38.0" layoutY="136.0" prefHeight="20.0" prefWidth="254.0" textAlignment="CENTER" visible="false">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="butom_style2" text="É preciso fornecer um emial!" wrappingWidth="162.53515625" />
+                     </children>
+                  </TextFlow>
+                  <TextFlow fx:id="semSenha" layoutX="34.0" layoutY="195.0" prefHeight="28.0" prefWidth="268.0" textAlignment="CENTER" visible="false">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="butom_style2" text="É preciso fornecer uma senha!" wrappingWidth="162.53515625" />
+                     </children>
+                  </TextFlow>
                </children>
             </AnchorPane>
          </children></VBox>
