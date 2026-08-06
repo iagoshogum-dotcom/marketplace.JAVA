@@ -52,6 +52,7 @@ public class CadastroController {
         String senhaConfirmacao = confirmarSenha.getText();
         if (!senhaConfirmacao.equals(senha)){
             senhaNaoIguais.setVisible(true);
+            return;
         }
         Usuario novoUsuario = new Usuario(usuario,senha);
         dbUsuario.cadastrarUsuario(novoUsuario);
@@ -59,7 +60,7 @@ public class CadastroController {
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(scene);
-        stage.setTitle("Visualizar Estoque");
+        stage.setTitle("Visual");
         stage.show();
 
     }
